@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0490085D341FD95A6518B6 /* libPods-ObjectiveCFirebaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCC34F41AB87F6B17CA1468 /* libPods-ObjectiveCFirebaseProject.a */; };
 		CABE0E6B20365C40000D3DD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CABE0E6A20365C40000D3DD9 /* AppDelegate.m */; };
 		CABE0E6E20365C40000D3DD9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABE0E6D20365C40000D3DD9 /* ViewController.m */; };
 		CABE0E7120365C40000D3DD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABE0E6F20365C40000D3DD9 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		943602B356CE5BB171C89026 /* Pods-ObjectiveCFirebaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCFirebaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCFirebaseProject/Pods-ObjectiveCFirebaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		CABE0E6620365C40000D3DD9 /* ObjectiveCFirebaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCFirebaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABE0E6920365C40000D3DD9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CABE0E6A20365C40000D3DD9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		CABE0E7520365C40000D3DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABE0E7720365C40000D3DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CABE0E7820365C40000D3DD9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D188ECFE6E35B60D5BD7181D /* Pods-ObjectiveCFirebaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCFirebaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCFirebaseProject/Pods-ObjectiveCFirebaseProject.debug.xcconfig"; sourceTree = "<group>"; };
+		FFCC34F41AB87F6B17CA1468 /* libPods-ObjectiveCFirebaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveCFirebaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0490085D341FD95A6518B6 /* libPods-ObjectiveCFirebaseProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		663CE6CA316C10A842E1C4ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFCC34F41AB87F6B17CA1468 /* libPods-ObjectiveCFirebaseProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A43C3A785D6F31CF8E0675DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D188ECFE6E35B60D5BD7181D /* Pods-ObjectiveCFirebaseProject.debug.xcconfig */,
+				943602B356CE5BB171C89026 /* Pods-ObjectiveCFirebaseProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CABE0E5D20365C40000D3DD9 = {
 			isa = PBXGroup;
 			children = (
 				CABE0E6820365C40000D3DD9 /* ObjectiveCFirebaseProject */,
 				CABE0E6720365C40000D3DD9 /* Products */,
+				A43C3A785D6F31CF8E0675DF /* Pods */,
+				663CE6CA316C10A842E1C4ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CABE0E7C20365C40000D3DD9 /* Build configuration list for PBXNativeTarget "ObjectiveCFirebaseProject" */;
 			buildPhases = (
+				1C78F45DFDD2D1E4ED880B6F /* [CP] Check Pods Manifest.lock */,
 				CABE0E6220365C40000D3DD9 /* Sources */,
 				CABE0E6320365C40000D3DD9 /* Frameworks */,
 				CABE0E6420365C40000D3DD9 /* Resources */,
+				9C3406D8E1ECB70B18F6FF3A /* [CP] Embed Pods Frameworks */,
+				4AE725DAFB43C37D1D998B00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C78F45DFDD2D1E4ED880B6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4AE725DAFB43C37D1D998B00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveCFirebaseProject/Pods-ObjectiveCFirebaseProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C3406D8E1ECB70B18F6FF3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveCFirebaseProject/Pods-ObjectiveCFirebaseProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CABE0E6220365C40000D3DD9 /* Sources */ = {
@@ -292,11 +367,12 @@
 		};
 		CABE0E7D20365C40000D3DD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D188ECFE6E35B60D5BD7181D /* Pods-ObjectiveCFirebaseProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z5EK2Z6N5;
-				INFOPLIST_FILE = ObjectiveCFirebaseProject/Info.plist;
+				INFOPLIST_FILE = "ObjectiveCFirebaseProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.unlv.keteboa.ObjectiveCFirebaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,11 +382,12 @@
 		};
 		CABE0E7E20365C40000D3DD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943602B356CE5BB171C89026 /* Pods-ObjectiveCFirebaseProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z5EK2Z6N5;
-				INFOPLIST_FILE = ObjectiveCFirebaseProject/Info.plist;
+				INFOPLIST_FILE = "ObjectiveCFirebaseProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.unlv.keteboa.ObjectiveCFirebaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
