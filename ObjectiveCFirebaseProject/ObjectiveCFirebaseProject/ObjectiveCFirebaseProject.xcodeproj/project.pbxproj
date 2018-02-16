@@ -14,6 +14,7 @@
 		CABE0E7320365C40000D3DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABE0E7220365C40000D3DD9 /* Assets.xcassets */; };
 		CABE0E7620365C40000D3DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABE0E7420365C40000D3DD9 /* LaunchScreen.storyboard */; };
 		CABE0E7920365C40000D3DD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CABE0E7820365C40000D3DD9 /* main.m */; };
+		CABE0E842036629D000D3DD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CABE0E832036629D000D3DD9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CABE0E7520365C40000D3DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CABE0E7720365C40000D3DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CABE0E7820365C40000D3DD9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CABE0E832036629D000D3DD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D188ECFE6E35B60D5BD7181D /* Pods-ObjectiveCFirebaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCFirebaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveCFirebaseProject/Pods-ObjectiveCFirebaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FFCC34F41AB87F6B17CA1468 /* libPods-ObjectiveCFirebaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjectiveCFirebaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 			children = (
 				CABE0E7220365C40000D3DD9 /* Assets.xcassets */,
 				CABE0E7720365C40000D3DD9 /* Info.plist */,
+				CABE0E832036629D000D3DD9 /* GoogleService-Info.plist */,
 				CABE0E7820365C40000D3DD9 /* main.m */,
 			);
 			path = "Supporting Files";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABE0E7620365C40000D3DD9 /* LaunchScreen.storyboard in Resources */,
+				CABE0E842036629D000D3DD9 /* GoogleService-Info.plist in Resources */,
 				CABE0E7320365C40000D3DD9 /* Assets.xcassets in Resources */,
 				CABE0E7120365C40000D3DD9 /* Main.storyboard in Resources */,
 			);
