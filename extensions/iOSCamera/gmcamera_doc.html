@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>gmcamera_doc</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">iOS Camera</h1>
+
+<h4 id="toc_1">A <em>GameMaker: Studio</em> extension developed by Beneton Software</h4>
+
+<ul>
+<li><a href="https://marketplace.yoyogames.com/publishers/65/beneton-software">More Extensions</a></li>
+<li><a href="https://marketplace.yoyogames.com/publishers/65/beneton-software/contact?asset=2905">Contact Us</a></li>
+</ul>
+
+<h2 id="toc_2">Table of Contents</h2>
+
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#constants">Constants</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+
+<p><a name="requirements"></a></p>
+
+<h2 id="toc_3">Requirements</h2>
+
+<p>This extension was fully tested on GameMaker: Studio v1.4.1763, compiling for both iOS and iOS (YYC).</p>
+
+<ul>
+<li>Xcode 8.0</li>
+<li>iOS 8+</li>
+</ul>
+
+<p><a name="getting-started"></a></p>
+
+<h2 id="toc_4">Getting Started</h2>
+
+<p>This extension package contains an example, in the form of GameMaker: Studio resources (sprites, objects, rooms, etc.) that can be imported in your project. This example is completely optional; it is meant to showcase what can be achieved with the extension, as well as help get familiarized with its functionality and quickly dive into the code. It is not meant to be used “as is”, and it doesn’t replace this documentation. If you wish to check out the example, we recommend adding the extension to an empty project, importing all the resources, moving the room that fits your device (phone or tablet) to the first position, and running it on your iOS or Android device (note: for Android, you have to create a full APK).</p>
+
+<p>The iOS Camera extension allows you to access the iPhone or iPad camera(s) in your GameMaker: Studio game or application. It contains two sets of functions, depending on the level of control you need. The first one is the easiest to implement but it’s also the least customizable. It consists essentially of one function:</p>
+
+<div><pre><code class="language-none">camera_launch_full_screen(position);</code></pre></div>
+
+<p>This function lets the user take a picture (not a video) using one of the device’s cameras. It uses iOS’s default “camera view” which will slide over your game’s view and stay there until the user takes a picture (or click on “Cancel”). The <code>position</code> argument determines which camera to use by default in the camera view (<code>CAMERA_POSITION_BACK</code> or <code>CAMERA_POSITION_FRONT</code>). The function itself doesn’t return anything because the process of taking a picture is asynchronous, but you can catch the picture that was taken by listening to the <code>took_picture</code> asynchronous event (see the “Events” section further in this document).</p>
+
+<p>There is another simple function, and this one is useful even if you use the most advanced set of functions as it doesn’t have an advanced equivalent:</p>
+
+<div><pre><code class="language-none">camera_launch_library();</code></pre></div>
+
+<p>As its name suggests, this function displays the photo library so the user can pick an existing photo from their device. Just like <code>camera_launch_full_screen()</code>, a view will slide over the game’s view and stay there until the user selects a picture or clicks on “Cancel”. In this case, the event to watch for is called <code>picked</code>. Also, both functions trigger a <code>dismissed</code> event when the user cancels them.</p>
+
+<p>Whenever <code>took_picture</code> or <code>picked</code> is triggered, the <code>async_load</code> DS map contains a <code>filename</code> key that represents the name of the image file saved by the extension in the save area of your game. Which means that you can do what you want with it, like saving it to the device with <code>camera_save_picture_to_library()</code>, or adding it as a sprite like this:</p>
+
+<div><pre><code class="language-none">var picture = sprite_add(async_load[? &quot;filename&quot;], 0, false, false, 0, 0);</code></pre></div>
+
+<p>An important note here: you probably don’t want to add pictures coming from the camera as is, due to their gigantic size (not to mention the JPEG format that is not ideal for GameMaker: Studio). That is why the extension has the function <code>camera_process_picture(filename, format, maxWidth, maxHeight)</code>, where <code>format</code> is either <code>CAMERA_FORMAT_JPEG</code> or <code>CAMERA_FORMAT_PNG</code>. That function returns the filename of the modified file (the original one is preserved). So, you could do it like this:</p>
+
+<div><pre><code class="language-none">var filename = async_load[? &quot;filename&quot;];
+var processed_filename = camera_process_picture(filename, CAMERA_FORMAT_PNG, 300, 200);
+var picture = sprite_add(processed_filename, 0, false, false, 0, 0);</code></pre></div>
+
+<p>You can also use <code>camera_set_picture_format(format)</code> and <code>camera_set_picture_max_dimensions(width, height)</code> for the same purpose, the difference being that these functions affect all the future pictures taken by the camera. You can set them globally at the beginning of your game, but you will lose the ability to retrieve the original images.</p>
+
+<p>Let’s now move to the second, more advanced set of functions to access the camera. That kind of implementation usually starts with a call to the following function:</p>
+
+<div><pre><code class="language-none">camera_enable(position, quality);</code></pre></div>
+
+<p>You can already see that it takes one more parameter, <code>quality</code>, which should be set to one of the <code>CAMERA_QUALITY_*</code> constants (see the “Constants” section further in this document). Once the camera is enabled (and you should make sure that it is by watching for the <code>enabled</code> event, or by polling with the function <code>camera_is_enabled()</code>), you can do anything from taking pictures to recording video, and you have full control over the UI (other than drawing over the preview layer). When you want to stop using the camera, simply call <code>camera_disable()</code>. Please note that the capture session can be interrupted by the OS in some situations, which will trigger the <code>disabled</code> event.</p>
+
+<p>One important thing to know is that when your app calls <code>camera_launch_full_screen()</code> or <code>camera_enable()</code> for the first time, iOS will display a prompt asking the user permission to access the camera (and the microphone as well in the case of <code>camera_enable()</code>, unless you call <code>camera_microphone_enable(false)</code> beforehand). If the user denies the access request, the camera will remain disabled and the <code>denied_access</code> event will be triggered. Same thing for the functions that require access to the library (<code>camera_launch_library()</code>, <code>camera_save_picture_to_library()</code>, and <code>camera_save_video_to_library()</code>).</p>
+
+<p>If you are writing a custom UI to control the camera, you probably want to display a preview of what the user is recording or taking a picture of somewhere on the screen. You can do that with:</p>
+
+<div><pre><code class="language-none">camera_show_preview(x, y, width, height);</code></pre></div>
+
+<p>Please note that the coordinates and dimensions that you need to pass to that function are not relative to GameMaker: Studio’s room, nor are they relative to the view, GUI layer, surface, or anything like that. They are relative to the application’s root view, which is the size of your device’s screen, in points, not in pixels. On Retina displays (iPhone 4 and later), one point is 2 pixels wide by 2 pixels high. That means that the root view’s size is half the actual screen resolution in each dimension. Simply put, if your device is an iPhone 6 (actual resolution of 750 x 1334), and you want the camera preview to fill the whole screen, you would need: <code>camera_show_preview(0, 0, 375, 667)</code>. Use the same function whenever you want to change the position or size of the preview. You can hide the preview at any moment with <code>camera_hide_preview()</code>. You can also change its scaling mode (fit, fill, or stretch) with <code>camera_preview_set_scaling_mode()</code> and its alpha transparency with <code>camera_preview_set_alpha()</code>. However, you cannot draw anything over the preview layer, as it is itself over your game’s layer.</p>
+
+<p>Below is the complete list of functions. Notice that many of them require the camera to be enabled to work. It is strongly recommended to go over the example project to better understand how they all fit together. If you are experiencing any issue, please make sure to check out the “Troubleshooting” section at the bottom of this document. If you don’t find an answer to your question, don’t hesitate to contact us through the YoYo Games Marketplace (link at the top). Thank you!</p>
+
+<p><a name="functions"></a></p>
+
+<h2 id="toc_5">Functions</h2>
+
+<div><pre><code class="language-none">camera_enable(position, quality)</code></pre></div>
+
+<p>Enables the camera.</p>
+
+<p><em>Real</em> <code>position</code> The camera to use; one of <code>CAMERA_POSITION_BACK</code> or <code>CAMERA_POSITION_FRONT</code>.</p>
+
+<p><em>Real</em> <code>quality</code> The image quality; one of the <code>CAMERA_QUALITY_*</code> constants.</p>
+
+<p>Callback events: <code>enabled</code>, <code>denied_access</code></p>
+
+<div><pre><code class="language-none">camera_disable()</code></pre></div>
+
+<p>Disables the camera.</p>
+
+<p>Callback event: <code>disabled</code></p>
+
+<div><pre><code class="language-none">camera_is_enabled()</code></pre></div>
+
+<p>Returns whether the camera is enabled.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">camera_exists(position)</code></pre></div>
+
+<p>Returns whether the given camera exists on the device.</p>
+
+<p><em>Real</em> <code>position</code> The camera to check for; one of <code>CAMERA_POSITION_BACK</code> or <code>CAMERA_POSITION_FRONT</code>.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">camera_get_position()</code></pre></div>
+
+<p>Returns the current camera (one of <code>CAMERA_POSITION_BACK</code> or <code>CAMERA_POSITION_FRONT</code>), or <code>-1</code> if the camera is disabled.</p>
+
+<p>Returns: <em>Real</em></p>
+
+<div><pre><code class="language-none">camera_get_quality()</code></pre></div>
+
+<p>Returns the current image quality (one of the <code>CAMERA_QUALITY_*</code> constants), or <code>-1</code> if the camera is disabled.</p>
+
+<p>Returns: <em>Real</em></p>
+
+<div><pre><code class="language-none">camera_take_picture()</code></pre></div>
+
+<p>Takes a picture with the current camera.</p>
+
+<p>Callback event: <code>took_picture</code></p>
+
+<div><pre><code class="language-none">camera_is_taking_picture()</code></pre></div>
+
+<p>Returns whether the camera is currently in the process of taking a picture.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">camera_can_record()</code></pre></div>
+
+<p>Returns whether the current camera is capable of recording video (a camera with quality <code>CAMERA_QUALITY_PHOTO</code> is not).</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">camera_start_recording()</code></pre></div>
+
+<p>Makes the current camera start recording video (if it’s capable).</p>
+
+<div><pre><code class="language-none">camera_stop_recording()</code></pre></div>
+
+<p>Makes the current camera stop recording video (if it is recording).</p>
+
+<p>Callback event: <code>finished_recording</code></p>
+
+<div><pre><code class="language-none">camera_is_recording()</code></pre></div>
+
+<p>Returns whether the camera is currently recording video.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">camera_show_preview(x, y, width, height)</code></pre></div>
+
+<p>Shows the camera preview at position (<code>x</code>, <code>y</code>) with dimensions <code>width</code> and <code>height</code>. If the aspect ratio of the camera’s captured images is different from the ratio of these dimensions, the images will be resized to fit, fill, or stretch to the preview area, depending on the current scaling mode (see <code>camera_preview_set_scaling_mode()</code>). The coordinates and dimensions are in points (on a Retina Display, 1 point = 2 x 2 pixels) and relative to the device’s screen.</p>
+
+<p><em>Real</em> <code>x</code></p>
+
+<p><em>Real</em> <code>y</code></p>
+
+<p><em>Real</em> <code>width</code></p>
+
+<p><em>Real</em> <code>height</code></p>
+
+<div><pre><code class="language-none">camera_hide_preview()</code></pre></div>
+
+<p>Hides the camera preview.</p>
+
+<div><pre><code class="language-none">camera_preview_is_visible()</code></pre></div>
+
+<p>Returns whether the camera preview is currently visible.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">camera_preview_set_scaling_mode(scaling_mode)</code></pre></div>
+
+<p>Sets the scaling mode of the camera preview. The default value is <code>CAMERA_SCALING_MODE_FIT</code>.</p>
+
+<p><em>Real</em> <code>scaling_mode</code> The new scaling mode; one of the <code>CAMERA_SCALING_MODE_*</code> constants.</p>
+
+<div><pre><code class="language-none">camera_preview_set_alpha(alpha)</code></pre></div>
+
+<p>Sets the alpha transparency value of the camera preview. <code>1</code> is fully opaque, <code>0</code> is fully transparent, and anything in between is translucent. The default is <code>1</code>.</p>
+
+<p><em>Real</em> <code>alpha</code> The new alpha transparency value; between <code>0</code> and <code>1</code>, inclusively.</p>
+
+<div><pre><code class="language-none">camera_get_width()</code></pre></div>
+
+<p>Returns the width of images captured by the current camera.</p>
+
+<p>Returns: <em>Real</em></p>
+
+<div><pre><code class="language-none">camera_get_height()</code></pre></div>
+
+<p>Returns the height of images captured by the current camera.</p>
+
+<p>Returns: <em>Real</em></p>
+
+<div><pre><code class="language-none">camera_set_flash(flash)</code></pre></div>
+
+<p>Sets the flash setting for the current camera. The default value is <code>CAMERA_FLASH_OFF</code>.</p>
+
+<p><em>Real</em> <code>flash</code> The new flash setting; one of the <code>CAMERA_FLASH_*</code> constants.</p>
+
+<div><pre><code class="language-none">camera_get_flash()</code></pre></div>
+
+<p>Gets the value of the current camera’s flash option (one of the <code>CAMERA_FLASH_*</code> constants).</p>
+
+<p>Returns: <em>Real</em></p>
+
+<div><pre><code class="language-none">camera_flash_is_available()</code></pre></div>
+
+<p>Returns whether the current camera has a flash and it is available to use.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">camera_launch_full_screen(position)</code></pre></div>
+
+<p>Launches the full screen camera view to take pictures. This camera is not affected by any of the previous functions, but it is affected by <code>camera_set_picture_format()</code> and <code>camera_set_picture_max_dimensions()</code>.</p>
+
+<p><em>Real</em> <code>position</code> The camera to use; one of <code>CAMERA_POSITION_BACK</code> or <code>CAMERA_POSITION_FRONT</code>.</p>
+
+<p>Callback events: <code>took_picture</code>, <code>dismissed</code>, <code>denied_access</code></p>
+
+<div><pre><code class="language-none">camera_launch_library()</code></pre></div>
+
+<p>Launches the photo library to select a picture from.</p>
+
+<p>Callback events: <code>picked</code>, <code>dismissed</code></p>
+
+<div><pre><code class="language-none">camera_save_picture_to_library(filename)</code></pre></div>
+
+<p>Saves an image to the device’s library.</p>
+
+<p><em>String</em> <code>filename</code> The image to save.</p>
+
+<p>Callback events: <code>saved</code>, <code>failed_to_save</code>, <code>access_denied</code></p>
+
+<div><pre><code class="language-none">camera_save_video_to_library(filename)</code></pre></div>
+
+<p>Saves a video to the device’s library.</p>
+
+<p><em>String</em> <code>filename</code> The video to save.</p>
+
+<p>Callback events: <code>saved</code>, <code>failed_to_save</code>, <code>access_denied</code></p>
+
+<div><pre><code class="language-none">camera_process_picture(filename, format, max_width, max_height)</code></pre></div>
+
+<p>Converts an image to a specific format, and makes sure it does not exceed the given dimensions (scale down to fit). Returns the filename of the processed image (leaving the original intact).</p>
+
+<p><em>String</em> <code>filename</code> The image to convert.</p>
+
+<p><em>Real</em> <code>format</code> The format to convert to; one of the <code>CAMERA_FORMAT_*</code> constants.</p>
+
+<p><em>Real</em> <code>max_width</code> The maximum width of the converted image (<code>-1</code> for no maximum).</p>
+
+<p><em>Real</em> <code>max_height</code> The maximum height of the converted image (<code>-1</code> for no maximum).</p>
+
+<p>Returns: <em>String</em> The filename of the converted image.</p>
+
+<div><pre><code class="language-none">camera_set_picture_format(format)</code></pre></div>
+
+<p>Globally sets the format to use when saving pictures taken with the camera. The default is <code>CAMERA_FORMAT_JPEG</code>.</p>
+
+<p><em>Real</em> <code>format</code> The new image format; one of the <code>CAMERA_FORMAT_*</code> constants.</p>
+
+<div><pre><code class="language-none">camera_set_picture_max_dimensions(width, height)</code></pre></div>
+
+<p>Globally sets the maximum dimensions to use when saving pictures taken with the camera. There are no maximum dimensions by default.</p>
+
+<p><em>Real</em> <code>width</code> The maximum width (<code>-1</code> for no maximum).</p>
+
+<p><em>Real</em> <code>height</code> The maximum height (<code>-1</code> for no maximum).</p>
+
+<div><pre><code class="language-none">camera_microphone_enable(enable)</code></pre></div>
+
+<p>Globally sets whether the application should have access to the device’s microphone. The default value is <code>true</code>, meaning the first time your application enables the camera on a given device, iOS will request the user’s permission to use the microphone. To avoid that, execute <code>camera_microphone_enable(false)</code> before the call to <code>camera_enable()</code>. Please note that recorded video will have no sound if you do that.</p>
+
+<p><em>Boolean</em> <code>enable</code> Whether to enable the microphone.</p>
+
+<div><pre><code class="language-none">camera_idle_timer_enable(enable)</code></pre></div>
+
+<p>Enables or disables the idle timer for the application. iOS applications created with GameMaker: Studio have the idle timer enabled by default, meaning the display will go to sleep if enough time passes without user interaction. That can be a problem with the camera because the display can go to sleep when you are recording video, stopping the recording automatically. You can prevent it from happening by calling <code>camera_idle_timer_enable(false)</code> beforehand.</p>
+
+<p><em>Boolean</em> <code>enable</code> Whether to enable the idle timer.</p>
+
+<p><a name="events"></a></p>
+
+<h2 id="toc_6">Events</h2>
+
+<p>This extension uses GameMaker: Studio’s way of providing callbacks via the <em>Social</em> asynchronous event. Whenever a Camera “event” happens, the <em>Social</em> event is triggered with an <code>async_load</code> DS map whose <code>type</code> key is <code>camera</code>. This helps you identify which callbacks come from this extension and which don’t. There is also a secondary key called <code>event</code>, a string identifying which event was triggered, among the following:</p>
+
+<p><code>enabled</code><br>
+The camera finished starting up and is now ready to use.</p>
+
+<p><code>disabled</code><br>
+The camera was disabled (programmatically or by the OS for some reason) and cannot be used until it is enabled again.</p>
+
+<p><code>denied_access</code><br>
+The user explicitly denied to give the application access to a particular service. The <code>service</code> key holds a string identifying which service it is: <code>camera</code>, <code>microphone</code>, or <code>library</code>.</p>
+
+<p><code>took_picture</code><br>
+The camera finished taking a picture and writing it to a file. The <code>filename</code> key holds the filename of the image, located in the save area of the application.</p>
+
+<p><code>failed_to_take_picture</code><br>
+The camera failed to take a picture or writing it to a file. The reason can vary: the camera was disabled just after a call to <code>camera_take_picture()</code> and the picture was not taken, there is not enough storage available, there is a hardware problem, etc.</p>
+
+<p><code>finished_recording</code><br>
+The camera finished recording a video and writing it to a file. The <code>filename</code> key holds the filename of the video, located in the save area of the application.</p>
+
+<p><code>failed_to_finish_recording</code><br>
+The camera failed to record a video or writing it to a file. The reason can vary: there is not enough storage available, there is a hardware problem, etc.</p>
+
+<p><code>saved</code><br>
+The extension finished saving a file to the library. The <code>filename</code> key tells you which file it is.</p>
+
+<p><code>failed_to_save</code><br>
+The extension was not able to save a file to the library for some reason. The <code>filename</code> key tells you which file it is.</p>
+
+<p><code>picked</code><br>
+The user picked a photo in the library and the extension finished writing it to a file. The <code>filename</code> key holds the filename of the image, located in the save area of the application.</p>
+
+<p><code>dismissed</code><br>
+The user dismissed the full screen camera view or the image picker (library) by clicking on “Cancel”.</p>
+
+<p><a name="constants"></a></p>
+
+<h2 id="toc_7">Constants</h2>
+
+<h3 id="toc_8">Camera Positions</h3>
+
+<ul>
+<li><code>CAMERA_POSITION_BACK</code></li>
+<li><code>CAMERA_POSITION_FRONT</code></li>
+<li><code>CAMERA_POSITION_UNSPECIFIED</code></li>
+</ul>
+
+<h3 id="toc_9">Camera Quality</h3>
+
+<ul>
+<li><code>CAMERA_QUALITY_HIGH</code> (Best for videos)</li>
+<li><code>CAMERA_QUALITY_MEDIUM</code></li>
+<li><code>CAMERA_QUALITY_LOW</code></li>
+<li><code>CAMERA_QUALITY_PHOTO</code> (Best for photos, but video recording not available)</li>
+<li><code>CAMERA_QUALITY_OTHER</code></li>
+</ul>
+
+<h3 id="toc_10">Preview Scaling Modes</h3>
+
+<ul>
+<li><code>CAMERA_SCALING_MODE_FIT</code> (Letterbox; does not fill the area)</li>
+<li><code>CAMERA_SCALING_MODE_FILL</code> (Fills the area but hides parts of the image)</li>
+<li><code>CAMERA_SCALING_MODE_STRETCH</code> (Fills the area but does not keep aspect ratio)</li>
+</ul>
+
+<h3 id="toc_11">Flash Modes</h3>
+
+<ul>
+<li><code>CAMERA_FLASH_OFF</code> (Flash is never used)</li>
+<li><code>CAMERA_FLASH_ON</code> (Flash is used all the time)</li>
+<li><code>CAMERA_FLASH_AUTO</code> (Flash is used when needed)</li>
+</ul>
+
+<h3 id="toc_12">Image Formats</h3>
+
+<ul>
+<li><code>CAMERA_FORMAT_JPEG</code></li>
+<li><code>CAMERA_FORMAT_PNG</code> (Bigger file size but preferred format for sprites)</li>
+</ul>
+
+<p><a name="troubleshooting"></a></p>
+
+<h2 id="toc_13">Troubleshooting</h2>
+
+<h4 id="toc_14">The game’s sounds and/or music start playing on the speakers when the camera is enabled, even when the device is set to “mute”.</h4>
+
+<p>Unfortunately, that is a side effect of changing the application’s audio session to “record and playback” mode, which is needed to record audio during video capture. There are two solutions: you can manually stop/pause any music when the camera is enabled (and start it again when it’s disabled), or you can turn off audio recording by calling <code>camera_microphone_enable(false)</code> before enabling the camera.</p>
+
+<p><a name="changelog"></a></p>
+
+<h2 id="toc_15">Changelog</h2>
+
+<h3 id="toc_16">0.9.0 (2016-10-31)</h3>
+
+<ul>
+<li>Added <code>NSCameraUsageDescription</code>, <code>NSMicrophoneUsageDescription</code>, and <code>NSPhotoLibraryUsageDescription</code> keys to <code>Info.plist</code> to prevent crash on iOS 10</li>
+<li>Fixed issue where saved pictures and videos would get overwritten after a restart</li>
+<li>Fixed memory leaks</li>
+<li>Prefixed all resources with <code>gmcamera_</code> to prevent conflicts</li>
+<li>Improved documentation</li>
+</ul>
+
+<h3 id="toc_17">0.8.5 (2015-11-11)</h3>
+
+<ul>
+<li>Added function <code>camera_idle_timer_enable()</code></li>
+<li>Added events <code>failed_to_take_picture</code> and <code>failed_to_finish_recording</code></li>
+<li>Renamed function <code>camera_use_microphone()</code> to <code>camera_microphone_enable()</code></li>
+</ul>
+
+<h3 id="toc_18">0.8.0 (2015-10-31)</h3>
+
+<ul>
+<li>First official release</li>
+</ul>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+
+</body>
+
+</html>

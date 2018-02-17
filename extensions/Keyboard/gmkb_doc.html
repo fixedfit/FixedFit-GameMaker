@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>gmkb_doc</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Keyboard</h1>
+
+<h4 id="toc_1">A <em>GameMaker: Studio</em> extension developed by Beneton Software</h4>
+
+<ul>
+<li><a href="https://marketplace.yoyogames.com/publishers/65/beneton-software">More Extensions</a></li>
+<li><a href="https://marketplace.yoyogames.com/publishers/65/beneton-software/contact?asset=245">Contact Us</a></li>
+</ul>
+
+<h2 id="toc_2">Table of Contents</h2>
+
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#constants">Constants</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#changelog">Changelog</a></li>
+</ul>
+
+<p><a name="requirements"></a></p>
+
+<h2 id="toc_3">Requirements</h2>
+
+<p>This extension was fully tested on GameMaker: Studio v1.4.1763, compiling for the following targets: iOS, iOS (YYC), Android / Fire, and Android / Fire (YYC).</p>
+
+<h3 id="toc_4">iOS</h3>
+
+<ul>
+<li>Xcode 8.0</li>
+<li>iOS 8+</li>
+</ul>
+
+<h3 id="toc_5">Android</h3>
+
+<ul>
+<li>Build Tools: 24+</li>
+<li>Support Lib: 23.2.1+</li>
+<li>Support Repository: 35+</li>
+<li>Target SDK/Compile SDK: 23+</li>
+<li><strong>Min SDK: 11+ (Android 3.0+)</strong></li>
+<li>Android NDK: 12b</li>
+<li>Java JDK: 1.8 (8u102)</li>
+<li>Visual Studio Express 2012</li>
+</ul>
+
+<p><a name="getting-started"></a></p>
+
+<h2 id="toc_6">Getting Started</h2>
+
+<p>This extension package contains three examples, in the form of GameMaker: Studio resources (sprites, objects, rooms, etc.) that can be imported in your project. These examples are completely optional; they are meant to showcase what can be achieved with the extension, as well as help get familiarized with its functionality and quickly dive into the code. They are not meant to be used “as is”, and they don’t replace this documentation. If you wish to check out the examples, we recommend adding the extension to an empty project, importing all the resources, moving the room of the example you want to try to the first position, and running it on your iOS or Android device (note: for Android, you have to create a full APK).</p>
+
+<p>The basic functionality is very simple to achieve. Here’s how to show the keyboard on iOS and Android:</p>
+
+<div><pre><code class="language-none">gmkb_show_keyboard();</code></pre></div>
+
+<p>After this, the user is able to type text, which your game or application can catch like this (put this code in a <em>Step</em> event):</p>
+
+<div><pre><code class="language-none">if (gmkb_text_did_change()) {
+     var text = gmkb_get_text();
+}</code></pre></div>
+
+<p>You can later hide the keyboard programmatically when the return key is pressed, for instance, like this (again, in a <em>Step</em> event):</p>
+
+<div><pre><code class="language-none">if (gmkb_return_key_was_pressed()) {
+     gmkb_hide_keyboard();
+}</code></pre></div>
+
+<p>However, you must know that the keyboard can also be hidden by the system or by the user himself (on iPad, there is a “hide” button on the keyboard, and on Android, the back button hides it). You can catch that event like this:</p>
+
+<div><pre><code class="language-none">if (gmkb_keyboard_did_hide()) {
+     // keyboard was hidden by system or user
+}</code></pre></div>
+
+<p>Or you can use <code>gmkb_keyboard_is_visible()</code> to detect if the keyboard is active at any moment.</p>
+
+<p>It is worth noting that many functions need to be called every step when the keyboard is active if you want them to return the correct value, such as <code>gmkb_text_did_change()</code>, <code>gmkb_keyboard_did_hide()</code>, <code>gmkb_key_was_pressed()</code>, <code>gmkb_return_key_was_pressed()</code>, <code>gmkb_backspace_key_was_pressed()</code>, and <code>gmkb_language_did_change()</code>.</p>
+
+<p>Please note that external keyboards (Bluetooth or other) work as well, meaning that as long as you have called <code>gmkb_show_keyboard()</code> or a similar function, you will be able to get the text entered by the user. But as soon as the keyboard is hidden with <code>gmkb_hide_keyboard()</code> or by something else, typing on the external keyboard will have no effect. Also, the on-screen keyboard is not always visible when an external keyboard is connected (for instance on iOS the user can choose to show or hide it as they want), but <code>gmkb_keyboard_is_visible()</code> will return <code>true</code> as long as the keyboard remains active. In a case where it’s active but not visible on the screen, <code>gmkb_keyboard_get_height()</code> returns <code>0</code>.</p>
+
+<p>Below is the complete list of functions. If you are experiencing any issue, please make sure to check out the “Troubleshooting” section at the bottom of this document. If you don’t find an answer to your question, don’t hesitate to contact us through the YoYo Games Marketplace (link at the top). Thank you!</p>
+
+<p><a name="functions"></a></p>
+
+<h2 id="toc_7">Functions</h2>
+
+<div><pre><code class="language-none">gmkb_show_keyboard()</code></pre></div>
+
+<p>Shows the keyboard with the default settings.</p>
+
+<div><pre><code class="language-none">gmkb_show_keyboard_type(type, rk_type)</code></pre></div>
+
+<p>Shows a specific type of keyboard with a specific return key type.</p>
+
+<p><em>Real</em> <code>type</code> The keyboard type; one of the <code>GMKB_TYPE_*</code> constants. Default: <code>GMKB_TYPE_DEFAULT</code>.</p>
+
+<p><em>Real</em> <code>rk_type</code> The return key type; one of the <code>GMKB_RK_TYPE_*</code> constants. On iOS, changing the <code>rk_type</code> only affects the appearance of the return key, but on Android it can also affect its functionality. Some return key types, like <code>GMKB_RK_TYPE_DONE</code>, can automatically hide the keyboard when pressed, depending on the keyboard type and the version of Android. You can always watch if the keyboard gets hidden with <code>gmkb_keyboard_did_hide()</code>. Also, some return key types may be ignored on Android (the default will be used), depending on your version. Default: <code>GMKB_RK_TYPE_DEFAULT</code>.</p>
+
+<div><pre><code class="language-none">gmkb_show_keyboard_ext(type, rk_type, appearance, capitalize, rk_disabled_until_input, rk_new_line, predictive)</code></pre></div>
+
+<p>Shows the keyboard with custom settings.</p>
+
+<p><em>Real</em> <code>type</code> The keyboard type; one of the <code>GMKB_TYPE_*</code> constants. Default: <code>GMKB_TYPE_DEFAULT</code>.</p>
+
+<p><em>Real</em> <code>rk_type</code> The return key type; one of the <code>GMKB_RK_TYPE_*</code> constants. See the notes in the documentation for <code>gmkb_show_keyboard_type()</code>. Default: <code>GMKB_RK_TYPE_DEFAULT</code>.</p>
+
+<p><em>Real</em> <code>appearance</code> The keyboard appearance; choose between <code>GMKB_APPEARANCE_LIGHT</code> and <code>GMKB_APPEARANCE_DARK</code>. This setting only takes effect on iOS. Default: <code>GMKB_APPEARANCE_LIGHT</code>.</p>
+
+<p><em>Real</em> <code>capitalize</code> The autocapitalization method used; one of the <code>GMKB_CAPITALIZE_*</code> constants. Default: <code>GMKB_CAPITALIZE_SENTENCES</code>.</p>
+
+<p><em>Boolean</em> <code>rk_disabled_until_input</code> Whether to only enable the return key when at least one character has been enterred. This setting only takes effect on iOS. Default: <code>false</code>.</p>
+
+<p><em>Boolean</em> <code>rk_new_line</code> Whether to add new lines to the text returned by <code>gmkb_get_text()</code> when the return key is pressed. Note: On Android, you may need to set this to <code>false</code> for <code>rk_type</code> to take effect. If it is <code>true</code>, the return key may look like the default even though you set <code>rk_type</code> to something different. Default: <code>true</code>.</p>
+
+<p><em>Boolean</em> <code>predictive</code> Whether to enable predictive text, if enabled in the OS settings. Default: <code>false</code>.</p>
+
+<div><pre><code class="language-none">gmkb_hide_keyboard()</code></pre></div>
+
+<p>Hides the keyboard and stops registering key presses (even if you use an external keyboard).</p>
+
+<div><pre><code class="language-none">gmkb_keyboard_is_visible()</code></pre></div>
+
+<p>Returns whether the keyboard is currently active. Note: If an external keyboard is connected to the device, the on-screen keyboard may hide itself as it is not needed but this function will still return <code>true</code> until the keyboard is hidden (programmatically with <code>gmkb_hide_keyboard()</code> or automatically by the system).</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">gmkb_keyboard_did_hide()</code></pre></div>
+
+<p>Returns whether the keyboard was hidden with <code>gmkb_hide_keyboard()</code>, dismissed by the user, or hidden by the system since the last call to this function.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">gmkb_keyboard_get_height()</code></pre></div>
+
+<p>Returns the vertical space currently occupied by the keyboard on the screen. This function can be useful to determine if you have to move UI elements to see them as you type. For iOS, the amount returned is in points, meaning that you have to multiply it by 2 to get the number of pixels on devices with a retina display (and by 3 on the iPhone 6 Plus). The function returns <code>0</code> when the keyboard is hidden.</p>
+
+<p>Returns: <em>Real</em> The keyboard’s current height on the screen, in points.</p>
+
+<div><pre><code class="language-none">gmkb_set_text(text)</code></pre></div>
+
+<p>Sets the text entered by the user. This is equivalent to changing the <code>keyboard_string</code> variable in GameMaker: Studio.</p>
+
+<p><em>String</em> <code>text</code> The text to set.</p>
+
+<div><pre><code class="language-none">gmkb_get_text()</code></pre></div>
+
+<p>Returns the text entered by the user (or set using <code>gmkb_set_text()</code>). This is equivalent to reading the <code>keyboard_string</code> variable in GameMaker: Studio.</p>
+
+<p>Returns: <em>String</em> The input text.</p>
+
+<div><pre><code class="language-none">gmkb_get_last_char()</code></pre></div>
+
+<p>Returns the text added by the last key press, which is equivalent to the <code>keyboard_lastchar</code> variable in GameMaker: Studio. This is usually just one character but some keys add multiple characters at once, for instance the “.com” key on the <code>GMKB_TYPE_URL</code> keyboard. Also, when the dictation feature is used, this function will return the whole sentence(s) that are being added to the text.</p>
+
+<p>Returns: <em>String</em> The last input character or group of characters.</p>
+
+<div><pre><code class="language-none">gmkb_text_did_change()</code></pre></div>
+
+<p>Returns whether the text changed since the last call to this function. This includes when the text was changed programmatically with <code>gmkb_set_text()</code>. Note: Pressing the return key if <code>rk_new_line</code> was set to <code>false</code>, or the backspace key when the text is empty, will not make this function return <code>true</code>. Use <code>gmkb_key_was_pressed()</code> instead.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">gmkb_key_was_pressed()</code></pre></div>
+
+<p>Returns whether a key was pressed since the last call to this function. It works pretty much like <code>gmkb_text_did_change()</code>, but only for text changes initiated by the user, and it also returns <code>true</code> when the return or backspace keys were pressed, regardless of whether the text changed as a result. The function keys (shift, caps lock, switch between languages, etc.), however, do not make this function return <code>true</code>.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">gmkb_return_key_was_pressed()</code></pre></div>
+
+<p>Returns whether the return key was pressed since the last call to this function.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">gmkb_backspace_key_was_pressed()</code></pre></div>
+
+<p>Returns whether the backspace key was pressed since the last call to this function.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">gmkb_language_disable(language)</code></pre></div>
+
+<p><em>iOS only</em></p>
+
+<p>Disables the international keyboard of the given language. When a keyboard is disabled, the user is still able to switch to it, but the characters typed on it do not affect the text returned by <code>gmkb_get_text()</code> (and <code>gmkb_text_did_change()</code> returns <code>false</code>).</p>
+
+<p><em>String</em> <code>language</code> A BCP 47 language code such as <code>&quot;es&quot;</code>, <code>&quot;en-US&quot;</code>, or <code>&quot;fr-CA&quot;</code>. It can also be <code>&quot;emoji&quot;</code> or <code>&quot;&quot;</code> (an empty string) to disable the emoji keyboard.</p>
+
+<div><pre><code class="language-none">gmkb_language_enable(language)</code></pre></div>
+
+<p><em>iOS only</em></p>
+
+<p>Re-enables a language disabled with <code>gmkb_language_disable()</code>.</p>
+
+<p><em>String</em> <code>language</code> The BCP 47 code of the language to re-enable.</p>
+
+<div><pre><code class="language-none">gmkb_language_did_change()</code></pre></div>
+
+<p><em>iOS only</em></p>
+
+<p>Returns whether the user switched to another international keyboard or input method since the last call to this function.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">gmkb_get_language()</code></pre></div>
+
+<p><em>iOS only</em></p>
+
+<p>Returns the language of the current keyboard.</p>
+
+<p>Returns: <em>String</em> A BCP 47 language code (examples: <code>&quot;es&quot;</code>, <code>&quot;en-US&quot;</code>, <code>&quot;fr-CA&quot;</code>).</p>
+
+<div><pre><code class="language-none">gmkb_get_input_method()</code></pre></div>
+
+<p>Returns the current input method.</p>
+
+<p>Returns: <em>String</em> A unique identifier for the current input method (example: <code>&quot;com.swiftkey.SwiftKeyApp.Keyboard&quot;</code>).</p>
+
+<div><pre><code class="language-none">gmkb_string_get_length(str)</code></pre></div>
+
+<p>Emoji-friendly version of GameMaker: Studio’s <code>string_length()</code>. Returns the actual number of characters in the given string (some Unicode characters like the emojis are made of two characters, but this function properly counts them as one).</p>
+
+<p><em>String</em> <code>str</code> The string to get the length of.</p>
+
+<p>Returns: <em>Real</em> The length of the string.</p>
+
+<div><pre><code class="language-none">gmkb_string_char_at(str, index)</code></pre></div>
+
+<p>Emoji-friendly version of GameMaker: Studio’s <code>string_char_at()</code>. Note: The first character is at index <code>0</code>, contrarily to GameMaker: Studio that makes it start at <code>1</code>.</p>
+
+<p><em>String</em> <code>str</code> The string to get a character from.</p>
+
+<p><em>Real</em> <code>index</code> The character position.</p>
+
+<p>Returns: <em>String</em> The character at the given position.</p>
+
+<div><pre><code class="language-none">gmkb_string_copy(str, index, count)</code></pre></div>
+
+<p>Emoji-friendly version of GameMaker: Studio’s <code>string_copy()</code>. Note: The first character is at index <code>0</code>, contrarily to GameMaker: Studio that makes it start at <code>1</code>.</p>
+
+<p><em>String</em> <code>str</code> The string to copy a part of.</p>
+
+<p><em>Real</em> <code>index</code> The position of the first character to copy.</p>
+
+<p><em>Real</em> <code>count</code> The number of characters to copy.</p>
+
+<p>Returns: <em>String</em> The copied string.</p>
+
+<div><pre><code class="language-none">gmkb_char_is_emoji(char)</code></pre></div>
+
+<p>Returns whether the given character is an emoji.</p>
+
+<p><em>String</em> <code>char</code> The character to check.</p>
+
+<p>Returns: <em>Boolean</em></p>
+
+<div><pre><code class="language-none">gmkb_char_get_sprite(char, font_size)</code></pre></div>
+
+<p>Returns a sprite representing the given character in the system’s default font, which can be an emoji.</p>
+
+<p><em>String</em> <code>char</code> The character to get a sprite of.</p>
+
+<p><em>Real</em> <code>font_size</code> The size of the character.</p>
+
+<p>Returns: <em>Resource</em> A sprite representing the given character.</p>
+
+<div><pre><code class="language-none">gmkb_string_get_chars(str, font, emoji_font_size, width, word_wrap)</code></pre></div>
+
+<p>Returns a <code>ds_list</code> with an item for each line of text in <code>str</code>. Each item is another <code>ds_list</code> containing an item for each character in the line. Each of these items is a <code>ds_map</code> with the following keys: <code>character</code> (a string containing the character), <code>width</code> (the width of the character in pixels), and <code>sprite</code> (if the character is an emoji, its sprite, otherwise <code>-1</code>).</p>
+
+<p><em>String</em> <code>str</code> The string to get the characters of.</p>
+
+<p><em>Resource</em> <code>font</code> The font you will use to draw the result (useful to get the width of each character).</p>
+
+<p><em>Real</em> <code>emoji_font_size</code> The font size for the emojis.</p>
+
+<p><em>Real</em> <code>width</code> In pixels, the maximum width of the string before a line break (<code>-1</code> for no maximum width).</p>
+
+<p><em>Boolean</em> <code>word_wrap</code> If a maximum width is set, whether to break lines between and not within words (except when a single word is longer than a line).</p>
+
+<p>Returns: <em>ds_list</em></p>
+
+<div><pre><code class="language-none">gmkb_clipboard_set(text)</code></pre></div>
+
+<p>Copies the given text to the system clipboard.</p>
+
+<p><em>String</em> <code>text</code> The text to copy.</p>
+
+<div><pre><code class="language-none">gmkb_clipboard_get()</code></pre></div>
+
+<p>Returns the text stored in the system clipboard.</p>
+
+<p>Returns: <em>String</em> The clipboard text.</p>
+
+<p><a name="constants"></a></p>
+
+<h2 id="toc_8">Constants</h2>
+
+<h3 id="toc_9">Keyboard Types</h3>
+
+<ul>
+<li><code>GMKB_TYPE_DEFAULT</code></li>
+<li><code>GMKB_TYPE_ASCII</code></li>
+<li><code>GMKB_TYPE_NUMBERS</code></li>
+<li><code>GMKB_TYPE_URL</code></li>
+<li><code>GMKB_TYPE_NUMBER_PAD</code></li>
+<li><code>GMKB_TYPE_PHONE_PAD</code></li>
+<li><code>GMKB_TYPE_NAME_PHONE_PAD</code></li>
+<li><code>GMKB_TYPE_EMAIL</code></li>
+<li><code>GMKB_TYPE_DECIMAL_PAD</code></li>
+<li><code>GMKB_TYPE_TWITTER</code></li>
+<li><code>GMKB_TYPE_WEB_SEARCH</code></li>
+<li><code>GMKB_TYPE_DATETIME</code> (Android only)</li>
+<li><code>GMKB_TYPE_PASSWORD</code> (Useful for completely disabling predictive text)</li>
+</ul>
+
+<h3 id="toc_10">Return Key Types</h3>
+
+<ul>
+<li><code>GMKB_RK_TYPE_DEFAULT</code></li>
+<li><code>GMKB_RK_TYPE_GO</code></li>
+<li><code>GMKB_RK_TYPE_GOOGLE</code></li>
+<li><code>GMKB_RK_TYPE_JOIN</code></li>
+<li><code>GMKB_RK_TYPE_NEXT</code></li>
+<li><code>GMKB_RK_TYPE_ROUTE</code></li>
+<li><code>GMKB_RK_TYPE_SEARCH</code></li>
+<li><code>GMKB_RK_TYPE_SEND</code></li>
+<li><code>GMKB_RK_TYPE_YAHOO</code></li>
+<li><code>GMKB_RK_TYPE_DONE</code></li>
+</ul>
+
+<h3 id="toc_11">Keyboard Appearance</h3>
+
+<ul>
+<li><code>GMKB_APPEARANCE_LIGHT</code></li>
+<li><code>GMKB_APPEARANCE_DARK</code></li>
+</ul>
+
+<h3 id="toc_12">Autocapitalization Methods</h3>
+
+<ul>
+<li><code>GMKB_CAPITALIZE_SENTENCES</code></li>
+<li><code>GMKB_CAPITALIZE_NONE</code></li>
+<li><code>GMKB_CAPITALIZE_WORDS</code></li>
+<li><code>GMKB_CAPITALIZE_ALL</code></li>
+</ul>
+
+<p><a name="troubleshooting"></a></p>
+
+<h2 id="toc_13">Troubleshooting</h2>
+
+<h4 id="toc_14">The functions don’t seem to do anything on Android.</h4>
+
+<p>This is most likely because you are using the command “Run the game” (or “Run in debug mode”) instead of “Create Executable for Target”. GameMaker: Studio requires to create a full APK for extensions to work (this is not the case on iOS).</p>
+
+<p><a name="changelog"></a></p>
+
+<h2 id="toc_15">Changelog</h2>
+
+<h3 id="toc_16">1.0.6 (2017-03-08)</h3>
+
+<ul>
+<li>Made <code>gmkb_key_was_pressed()</code> more consistent between iOS and Android and improved its documentation</li>
+<li>Fixed a bug in the textboxes and advanced examples</li>
+</ul>
+
+<h3 id="toc_17">1.0.4 (2017-01-13)</h3>
+
+<ul>
+<li>Possibly breaking change: <code>gmkb_text_did_change()</code> now returns <code>true</code> when the text was changed programmatically with <code>gmkb_set_text()</code> for consistency with the GML fallback behaviour and because it makes more sense</li>
+<li>Simplified and improved some of the GML fallback functions</li>
+</ul>
+
+<h3 id="toc_18">1.0.3 (2016-10-31)</h3>
+
+<ul>
+<li>Some code cleanup on iOS</li>
+<li>Prefixed all resources with <code>gmkb_</code> to prevent conflicts</li>
+<li>Improved documentation</li>
+</ul>
+
+<h3 id="toc_19">1.0.2 (2015-10-31)</h3>
+
+<ul>
+<li>Fixes and improvements related to emojis on both iOS and Android (including support for new emojis)</li>
+<li>New function <code>gmkb_get_input_method()</code></li>
+<li>Added a Troubleshooting section to the documentation + included the documentation in the extension itself</li>
+<li>Other small fixes</li>
+</ul>
+
+<h3 id="toc_20">1.0.1 (2015-02-13)</h3>
+
+<ul>
+<li>Android: Fixed a bug that caused games to lose immersive mode after hiding the keyboard</li>
+<li>Android: Fixed a bug in which the keyboard would stay visible when pressing the Home or Menu button on some 4.x devices</li>
+</ul>
+
+<h3 id="toc_21">1.0.0 (2015-01-31)</h3>
+
+<ul>
+<li>First official release</li>
+</ul>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+camera_launch_full_screen(CAMERA_POSITION_FRONT);
+
