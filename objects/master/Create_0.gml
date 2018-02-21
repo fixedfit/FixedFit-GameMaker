@@ -6,3 +6,4 @@ init_profile();//Initialize profile
 image_loaded=false;
 text="";
 global.top_height=0;
+//
